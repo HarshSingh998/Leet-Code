@@ -1,67 +1,48 @@
-
 /*
-
-Question: 2427 -> Number of Common Factors
+Question: 2469 -> Convert the Temperature
 
 Problem Statement:
-Given two positive integers a and b, return the number of common factors of a and b.
+Given a temperature in Celsius, convert it into Kelvin and
+Fahrenheit and return [kelvin, fahrenheit].
 
-An integer x is a common factor of a and b if x divides both a and b.
+Formulas:
+Kelvin = Celsius + 273.15
+Fahrenheit = Celsius * 1.80 + 32.00
 
 Example 1:
-Input: a = 12, b = 6
-Output: 4
-Explanation: The common factors of 12 and 6 are 1, 2, 3, 6.
+Input: celsius = 36.50
+Output: [309.65000, 97.70000]
 
 Example 2:
-Input: a = 25, b = 30
-Output: 2
-Explanation: The common factors of 25 and 30 are 1, 5.
+Input: celsius = 122.11
+Output: [395.26000, 251.79800]
 
 Constraints:
-1 <= a, b <= 1000
+0 <= celsius <= 1000
 
 Task:
-Write a function that returns the total number of common factors
-of the two given integers a and b.
-
-LeetCode Link:
-https://leetcode.com/problems/number-of-common-factors/
+Return the converted temperatures in an array.
 
 */
-
-
-
-
-
-/*
-------------------------------------------------------
------------------- VS CODE FORM ----------------------
-------------------------------------------------------
-*/
-
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
 
-    int a, b;
+    double celsius;
 
-    cout << "Enter Your First Number : " ;
-    cin >> a ;
-    cout << "Enter Your Second Number : ";
-    cin >> b ;
+    cout << "Enter Your Temperature In Celsius : ";
+    cin >> celsius;
 
-    int count = 0;
+    double kelvin = celsius + 273.15;
+    double fahrenheit = celsius * 1.80 + 32.00;
 
-    for (int i = 1; i <= min(a, b); i++) {
-        if (a % i == 0 && b % i == 0) {
-            count++;
-        }
-    }
+    cout << fixed << setprecision(5);
 
-    cout << "Number of Common Factors  : " << count << endl;
+    cout << "Kelvin : " << kelvin << endl;
+    cout << "Fahrenheit : " << fahrenheit << endl;
 
     return 0;
 }
@@ -70,30 +51,13 @@ int main() {
 
 
 
-
-
 /*
-------------------------------------------------------
------------------ LEETCODE FORM ----------------------
-------------------------------------------------------
-
-
-
-class Solution {
-public:
-    int commonFactors(int a, int b) {
-
-        int count = 0;
-
-        for (int i = 1; i <= min(a, b); i++) {
-            if (a % i == 0 && b % i == 0) {
-                count++;
-            }
-        }
-        return count;
-    }
-};
-
-
+Important Points:
+----------------
+1. setprecision(2) alone -> 2 significant digits.
+2. fixed + setprecision(2) -> 2 digits after decimal.
+3. setprecision(3) with fixed -> 3 digits after decimal.
 
 */
+
+
