@@ -51,7 +51,20 @@ int main() {
 
 
 
+
 /*
+
+#include <iomanip>  ----->>>>>  Used for output formatting.
+
+fixed          -> Fixed decimal notation.
+setprecision() -> Controls decimal precision.
+
+
+Example : 
+cout << fixed << setprecision(2);
+Output: 97.70
+
+
 Important Points:
 ----------------
 1. setprecision(2) alone -> 2 significant digits.
@@ -59,5 +72,3 @@ Important Points:
 3. setprecision(3) with fixed -> 3 digits after decimal.
 
 */
-
-
