@@ -2,8 +2,7 @@
 Question: 2469 -> Convert the Temperature
 
 Problem Statement:
-Given a temperature in Celsius, convert it into Kelvin and
-Fahrenheit and return [kelvin, fahrenheit].
+Given a temperature in Celsius, convert it into Kelvin and Fahrenheit and return [kelvin, fahrenheit].
 
 Formulas:
 Kelvin = Celsius + 273.15
